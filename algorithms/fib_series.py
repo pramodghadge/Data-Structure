@@ -28,5 +28,6 @@ def fibr(n):
 if __name__ == '__main__':
     for i in fib(20):
         print i
+
     for i in range(10):
         print fibr(i)

@@ -36,7 +36,6 @@ class DepthFirstTraversal(object):
 
         if not self.pred[v]:
             return None
-
         while v != self.start:
             v = self.pred[v]
             path.insert(0,v)

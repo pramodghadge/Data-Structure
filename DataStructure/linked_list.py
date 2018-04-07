@@ -15,7 +15,7 @@ class LinkedList(object):
             raise ValueError('Linked list is empty')
 
         node = self.head
-        last =None
+        last = None
         while node:
             if node.value == target:
                 if last is None:

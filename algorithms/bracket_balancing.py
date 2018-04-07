@@ -8,7 +8,7 @@ def bracket_balancing(myStr):
             if not myStack:
                 return False
             # print myStack
-            lastChr = myStack.pop(-1)
+            lastChr = myStack.pop()
             c = None
             if lastChr == '(':
                 c = ')'
@@ -25,5 +25,5 @@ def bracket_balancing(myStr):
     return True
 
 if  __name__ == '__main__':
-    myStr = '(a{b[n]m}j)['
+    myStr = '(a{b[n]m}j)[Na]'
     print bracket_balancing(myStr)

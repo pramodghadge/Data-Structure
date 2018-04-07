@@ -16,6 +16,28 @@ def bst_check(node, minValue, maxValue):
 
     return bst_check(node.left, minValue, node.value-1) and bst_check(node.right, node.value+1, maxValue)
 
+def find_min(node):
+    if node is None:
+        return None
+
+    if node.left is None:
+        return node.value
+
+    return find_min(node.left)
+
+def maxDepth(node):
+    if node is None:
+        return 0
+
+    # if node.left is None and node.right is None:
+    #     return 0
+
+    leftDepth = 1 + maxDepth(node.left)
+    rightDepth = 1 + maxDepth(node.right)
+
+    return leftDepth if leftDepth > rightDepth else rightDepth
+
+
 if __name__ == '__main__':
     tree = BinaryTree()
     tree.add(10)
@@ -30,3 +52,7 @@ if __name__ == '__main__':
         print 'Tree is BST'
     else:
         print 'Tree is not BST'
+
+
+    print find_min(tree.root)
+    print maxDepth(tree.root)

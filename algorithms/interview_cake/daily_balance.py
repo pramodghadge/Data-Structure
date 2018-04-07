@@ -1,6 +1,7 @@
 def show_balances(aBalanceList, aDaysAgo):
     for i in range(-aDaysAgo,-1):
         endIdx = i + 2
+        print endIdx
         if endIdx:
             slice = str(daily_balances[i:endIdx])
         else:
